@@ -10,7 +10,7 @@ LDFLAGS=
 SRCS=src/foo-test.c src/foo.c src/bar/bar.c
 TARGETS=src/foo-test libfoo.a libbar.a
 
-libbar.a: src/bar/bar.y
+libbar.a: src/bar/bar.o
 libfoo.a: src/foo.o
 src/foo-test: src/foo-test.o libfoo.a libbar.a
 
